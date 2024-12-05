@@ -1,0 +1,22 @@
+{
+  "name": "blue_humanity",
+  "version": "1.0.0",
+  "description": "projet pour la nuit de l'info",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CantonyEddy/Blue_Humanity.git"
+  },
+  "author": "kalix",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CantonyEddy/Blue_Humanity/issues"
+  },
+  "homepage": "https://github.com/CantonyEddy/Blue_Humanity#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}

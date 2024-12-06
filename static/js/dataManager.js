@@ -76,7 +76,7 @@ function newGameData() {
                 priceIncreasePerLevel: 1.5
             }
         },
-        score: 0,
+        pumpScore: 0,
         money: 0,
         collectedFishCount: 0,
         rebirth: 0,

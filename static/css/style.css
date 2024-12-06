@@ -17,6 +17,7 @@ body {
     height: 280%;
     overflow: hidden;
     margin-top: -800px; 
+    z-index: 5; /* Assurez-vous que les vagues sont derrière le fil */
 }
 
 #fond-container {
@@ -55,6 +56,7 @@ body {
     background-repeat: no-repeat;
     z-index: 30;
 }
+
 .wave {
     position: absolute;
     top: 0; 
@@ -96,13 +98,11 @@ h1 {
 }
 
 #Pompe-container {
-
     position: absolute;
     top: 90px;
     left: 0;
     width: 100%;
     height: 100%;
-   
     background-size: contain;
     background-position: center; 
     background-repeat: no-repeat;
@@ -128,18 +128,18 @@ h1 {
     height: 100px;
     background-color: #555;
     position: absolute;
-    top: -100px; /* Position levée */
+    top: -100px; 
     left: 15px;
 }
 
 .pump-head {
     width: 50px;
-    height: 20px; /* Transformer en rectangle */
+    height: 20px; 
     background-color: #ff0000;
     position: absolute;
-    top: -120px; /* Ajuster cette valeur pour positionner par-dessus le piston */
+    top: -120px; 
     left: 0;
-    z-index: 1; /* Assurez-vous qu'il est au-dessus du piston */
+    z-index: 1; 
 }
 
 .pump-hose {
@@ -162,14 +162,51 @@ h1 {
 
 .pump-animate .pump-handle,
 .pump-animate .pump-head {
-    animation: pump-animation 0.5s infinite; /* Animation */
+    animation: pump-animation 0.5s infinite; 
 }
 
 @keyframes pump-animation {
     0%, 100% {
-        top: -100px; /* Position levée */
+        top: -100px; 
     }
     50% {
-        top: -25px; /* Position baissée */
+        top: -25px; 
+    }
+}
+
+.rope {
+    position: fixed;
+    top: 0px;
+    left: 550px;
+    width: 4px;
+    height: 100vh;
+    background-color: transparent; 
+    z-index: 50; 
+    transition: top 0.05s linear;
+}
+
+.hook {
+    position: absolute;
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50; 
+}
+
+.hook img {
+    width: 50px;
+    height: auto;
+}
+
+.hook-animate {
+    animation: raise-hook 1s forwards;
+}
+
+@keyframes raise-hook {
+    0% {
+        bottom: 0; 
+    }
+    100% {
+        bottom: 100px; 
     }
 }

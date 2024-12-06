@@ -57,3 +57,72 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 10;
 }
+
+/* Upgrade Button */
+#popup-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #5A45FF;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#popup-button:hover {
+    background-color: #7265FF;
+}
+
+/* Popup Styles */
+#upgrade-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 101;
+}
+
+.popup-content {
+    width: 100%;
+}
+
+#upgrades-list {
+    list-style: none;
+    padding: 0;
+}
+
+#upgrades-list li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #E0F2FE;
+    border: 1px solid #5A45FF;
+    border-radius: 5px;
+}
+
+#close-popup {
+    background-color: #5A45FF;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#close-popup:hover {
+    background-color: #7265FF;
+}

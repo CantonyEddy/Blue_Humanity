@@ -8,7 +8,30 @@
 <body>
     <div id="waves-container"></div>
     <div id="fond-container"></div>
+    <div id="right-container">
+        <div id="scoreboard-container"></div>
+        <div id="image-container"></div>
+        <div id="Pompe-container">
+            <div class="pump-container">
+                <div class="pump-body">
+                    <div class="pump-head"></div>
+                    <div class="pump-handle"></div>
+                    <div class="pump-hose"></div>
+                    <div class="pump-nozzle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="/static/js/waves.js"></script>
+    <script>
+        document.querySelector('.pump-container').addEventListener('click', function() {
+            const pump = this;
+            pump.classList.add('pump-animate');
+            setTimeout(() => {
+                pump.classList.remove('pump-animate');
+            }, 100); 
+        });
+    </script>
 </body>
 </html>

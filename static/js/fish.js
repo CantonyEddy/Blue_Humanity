@@ -57,7 +57,7 @@ for (let i = 0; i < 15; i++) {
 
 setInterval(() => {
     if(document.getElementById('fond-container').children.length > 20 || (Math.random() * document.getElementById('fond-container').children.length) >= 10) {
-            document.getElementById('fond-container').children[0].remove();
+        document.getElementById('fond-container').children[0].remove();
     }
     document.getElementById('fond-container').appendChild(generateFishDiv());
     

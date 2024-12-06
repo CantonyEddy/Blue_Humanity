@@ -66,7 +66,7 @@ body {
     background-repeat: repeat-x;
     animation: wave-forward-reverse 20s linear infinite;
     transform-origin: center bottom;
-    z-index: 10;
+    z-index: 5; /* Assurez-vous que le z-index est inférieur à celui de la corde */
 }
 
 @keyframes wave-forward-reverse {
@@ -128,7 +128,7 @@ h1 {
     height: 100px;
     background-color: #555;
     position: absolute;
-    top: -100px; 
+    top: -100px; /* Position levée */
     left: 15px;
 }
 
@@ -181,25 +181,8 @@ h1 {
     width: 4px;
     height: 100vh;
     background-color: transparent; 
-    z-index: 50; 
+    z-index: 100; 
     transition: top 0.05s linear;
-}
-
-.hook {
-    position: absolute;
-    bottom: 0; 
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 50; 
-}
-
-.hook img {
-    width: 50px;
-    height: auto;
-}
-
-.hook-animate {
-    animation: raise-hook 1s forwards;
 }
 
 @keyframes raise-hook {
@@ -209,4 +192,13 @@ h1 {
     100% {
         bottom: 100px; 
     }
+}
+
+canvas {
+    position: absolute;
+    top: 50px;
+    left: 300px;
+    display: block;
+    margin: 20px auto;
+    z-index: 100;
 }

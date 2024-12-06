@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function createWave(index) {
         const wave = document.createElement('div');
         wave.classList.add('wave');
-        wave.style.zIndex = index;
+        wave.style.zIndex = 5; // Assurez-vous que le z-index est inférieur à celui de la corde
         wave.style.opacity = (1 - index * 0.2).toString();
         wave.style.animationDuration = `${20 + index * 4}s`;
 

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const wavesContainer = document.getElementById('waves-container');
-    const waveColors = ['#4225F4', '#5A45FF', '#7265FF'];
-    const numberOfWaves = 3;
+    const waveColors = ['#7265FF', '#5A45FF', '#4225F4']; // Inverser l'ordre des couleurs
+    const numberOfWaves = 4;
 
     function createWaveSVG(color, opacity) {
         const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         wave.style.opacity = (1 - index * 0.2).toString();
         wave.style.animationDuration = `${20 + index * 4}s`;
 
-        const svg = createWaveSVG(waveColors[index], 1 - index * 0.2);
+        const svg = createWaveSVG(waveColors[index % waveColors.length], 1 - index * 0.2);
         wave.appendChild(svg);
 
         return wave;
@@ -39,4 +39,3 @@ document.addEventListener('DOMContentLoaded', function() {
         wavesContainer.appendChild(wave);
     }
 });
-

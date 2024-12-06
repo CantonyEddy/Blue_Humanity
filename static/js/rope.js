@@ -33,7 +33,7 @@ let hidePopUpAt = Date.now();
 function raiseRope() {
     let data = loadGameData();
     if (ropePosition > 100) {
-        ropePosition -= 12 + data.upgrades.PumpIncreaseSpeed.level; // Remonte
+        ropePosition -= 12 + data.upgrades.PumpIncreaseSpeed.level*data.upgrades.PumpIncreaseSpeed.increase; // Remonte
         rope.style.top = ropePosition + 'px';
     }
     ctx.clearRect(0, 0, canvas.width, canvas.height);

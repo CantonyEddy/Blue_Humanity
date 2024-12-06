@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #E0F2FE;
+    overflow: hidden;
+}
+
+#waves-container {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 280%;
+    overflow: hidden;
+    margin-top: -800px; 
+}
+
+#fond-container {
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background-color: #5A45FF; 
+    z-index: 20; 
+}
+
+.wave {
+    position: absolute;
+    top: 0; /* Aligner en haut */
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat-x;
+    animation: wave-forward-reverse 20s linear infinite;
+    transform-origin: center bottom;
+}
+
+@keyframes wave-forward-reverse {
+    0%, 100% {
+        transform: translateX(0) translateZ(0);
+    }
+    50% {
+        transform: translateX(-50%) translateZ(0);
+    }
+}
+
+h1 {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}

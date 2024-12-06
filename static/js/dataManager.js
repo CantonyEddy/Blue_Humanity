@@ -86,3 +86,5 @@ function newGameData() {
     saveGameData(newData);
     return newData;
 }
+
+export { saveGameData, loadGameData, newGameData };

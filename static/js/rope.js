@@ -31,8 +31,9 @@ let lastClickTime = 0; // Pour détecter les spams de clic
 let hidePopUpAt = Date.now();
 // Fonction pour remonter le fil
 function raiseRope() {
+    let data = loadGameData();
     if (ropePosition > 100) {
-        ropePosition -= 12; // Remonte
+        ropePosition -= 12 + data.upgrades.PumpIncreaseSpeed.level; // Remonte
         rope.style.top = ropePosition + 'px';
     }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -42,8 +43,9 @@ function raiseRope() {
 
 // Fonction pour descendre le fil
 function lowerRope() {
+    let data = loadGameData();
     if (ropePosition < 600) {
-        ropePosition += 2; // Descend
+        ropePosition += 2 * 1/data.upgrades.PumpDecreaseSpeed.level; // Descend
         rope.style.top = ropePosition + 'px';
     }
     ctx.clearRect(0, 0, canvas.width, canvas.height);

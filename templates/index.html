@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fil de Canne à Pêche</title>
     <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/fish.css">
+    <style>
+        #waves-container .wave {
+            z-index: 5;
+        }
+        #rope {
+            position: relative;
+            z-index: 10; /* Assurez-vous que ce z-index est plus élevé que les vagues */
+        }
+    </style>
 </head>
 <body>
     <div id="waves-container"></div>
@@ -27,11 +37,14 @@
     <div>
         <div class="container">
             <div id="rope" class="rope">
-                <div class="hook"><img src="/static/image/Ameson.png" alt="hamsson"></div>
+                <div class="hook"><img src="/static/image/Amecon.png" alt="hamsson"></div>
             </div>
         </div>
     </div>
     <canvas id="canvas" width="500" height="600"></canvas>
+
+    <!-- Upgrade Button -->
+    <button id="popup-button">Upgrades</button>
 
     <script src="/static/js/waves.js"></script>
     <script src="/static/js/rope.js"></script>
@@ -41,7 +54,7 @@
             pump.classList.add('pump-animate');
             setTimeout(() => {
                 pump.classList.remove('pump-animate');
-            }, 500); // Durée de l'animation en millisecondes
+            }, 200); // Durée de l'animation en millisecondes
 
             const hook = document.querySelector('.hook');
             hook.classList.add('hook-animate');
@@ -50,5 +63,7 @@
             }, 1000); // Durée de l'animation de l'hameçon en millisecondes
         });
     </script>
+    <script src="/static/js/upgradePopup.js"></script>
+    <script src="/static/js/fish.js"></script>
 </body>
 </html>

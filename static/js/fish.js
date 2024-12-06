@@ -20,7 +20,7 @@ function generateFishDiv() {
     }
 
     fishDiv.style.left = '-100px';
-    fishDiv.style.animationDelay= `${Math.random()*4}s`;
+    fishDiv.style.animationDelay= `${Math.random()*20}s`;
     fishDiv.style.animationDuration = `${Math.random()*5 + 20}s`;
     fishDiv.style.bottom = `${Math.floor(Math.random() * (300-55))}px`;
 
@@ -50,18 +50,11 @@ function getRandomFish() {
     };
 }
 
-for (let i = 0; i < 15; i++) {
+for (let i = 0; i < 20; i++) {
     document.getElementById('fond-container').appendChild(generateFishDiv());
 }
 
 
-setInterval(() => {
-    if(document.getElementById('fond-container').children.length > 20 || (Math.random() * document.getElementById('fond-container').children.length) >= 10) {
-        document.getElementById('fond-container').children[0].remove();
-    }
-    document.getElementById('fond-container').appendChild(generateFishDiv());
-    
-}, 15000);
 
 export {getRandomFish}
 

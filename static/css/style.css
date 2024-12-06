@@ -69,6 +69,18 @@ body {
     z-index: 5; /* Assurez-vous que le z-index est inférieur à celui de la corde */
 }
 
+#fishingPopUp {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #ffffff;
+    border: 4px solid #763300;
+    z-index: 50;
+    display: none;
+}
+
 @keyframes wave-forward-reverse {
     0%, 100% {
         transform: translateX(0) translateZ(0);
